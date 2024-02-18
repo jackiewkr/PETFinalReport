@@ -1,0 +1,52 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage{PETFinalReport} % include this!
+
+% custom fields for title page and headers
+\project{Projectile Motion Simulation}
+\module{ELEXXXXXH}
+\supervisor{Dr. Aye Bee, Dr. Cee Dee}
+\college{James College}
+
+\title{Project Preparation Report}
+\author{Jacqueline Walker}
+
+%% packages
+\usepackage[style=ieee]{biblatex}
+\usepackage{blindtext}
+
+\addbibresource{ref.bib}
+
+\begin{document}
+    \maketitle
+    
+    % put TOC on its own page
+    \newpage
+    \tableofcontents
+    \newpage
+    
+    % custom abstract environment
+    \begin{frabstract}
+            \blindtext[1]
+    \end{frabstract}
+
+    % condense statement of ethics onto same page as abstract 
+    \vfill{}
+    {\let\clearpage\relax \chapter*{Statement of Ethics}}
+    \addcontentsline{toc}{chapter}{Statement of Ethics}
+    \blindtext[1]
+    \vspace{24pt}
+
+    \chapter{Background}
+    \blindtext[12]
+
+    \chapter{Aims \& Objectives}
+    \blindtext[12]
+
+    \chapter{Approach}
+    \blindtext[12]
+
+    % custom command for references
+    \nocite{*}
+    \frreferences
+
+\end{document}
