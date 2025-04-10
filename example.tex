@@ -1,55 +1,55 @@
-% Example LaTeX file for creating a Final Year report
-% By Jacqueline Walker, licensed under the Mozilla MPLv2
+\documentclass[12pt, twoside]{pet-final-report}
 
-\documentclass[a4paper,12pt]{report}
-\usepackage{PETFinalReport} % include this!
-
-% custom fields for title page and headers
-\project{Projectile Motion Simulation}
-\module{ELEXXXXXH}
-\supervisor{Dr. Aye Bee, Dr. Cee Dee}
-\college{James College}
-
-\title{Project Preparation Report}
+\project{A Generic Final Report}
+\module{ELE000XXH}
+\acyear{24/25}
+\supervisor{Dr. Foo Bar, Dr. Fizz Buzz}
+\college{Glorp College}
 \author{Jacqueline Walker}
 
-%% packages
-\usepackage[style=ieee]{biblatex}
 \usepackage{blindtext}
 
-\addbibresource{ref.bib}
-
 \begin{document}
-    \maketitle
-    
-    % put TOC on its own page
-    \newpage
-    \tableofcontents
-    \newpage
-    
-    % custom abstract environment
-    \begin{frabstract}
-            \blindtext[1]
-    \end{frabstract}
+\maketitle
 
-    % condense statement of ethics onto same page as abstract 
-    \vfill{}
-    {\let\clearpage\relax \chapter*{Statement of Ethics}}
-    \addcontentsline{toc}{chapter}{Statement of Ethics}
-    \blindtext[1]
-    \vspace{24pt}
+\begin{frabstract}
+        This file aims to provide an overview of the \FRverb{pet-final-report}
+        class and its functionalities. The class file is modified from my own
+        final report, and therefore is influenced by my own personal taste.
+        It is assumed that you have installed \FRverb{texlive-all}.
 
-    \chapter{Background}
-    \blindtext[12]
+        As stated within the class file, this class is licenced under CC0
+        and is therefore public domain. This is to prevent any issues with
+        others trying to use it with their own final reports.
 
-    \chapter{Aims \& Objectives}
-    \blindtext[12]
+        The University of York logo \& shield included within this project are
+        the property of the University of York.
+\end{frabstract}
 
-    \chapter{Approach}
-    \blindtext[12]
+\begin{fracknowledgements}
+        I'd like to acknowledge Donald Knuth for the TeX typesetting engine.
+\end{fracknowledgements}
 
-    % custom command for references
-    \nocite{*}
-    \frreferences
+\begin{frethics}
+        No animals were harmed in the compilation of this document.
+\end{frethics}
+
+% put TOC on LHS with blank page next to it
+\newpage
+\tableofcontents
+\newpage 
+
+\chapter{Introduction}
+\blindtext[12]
+\section{New Section!}
+\blindtext[6]
+\subsection{New Subsection!}
+\blindtext[6]
+\subsubsection{New Subsubsection!}
+\blindtext[6]
+
+\chapter{Background}
+\chapter{Class Listing}
+\frcodelst{pet-final-report.cls}
 
 \end{document}
